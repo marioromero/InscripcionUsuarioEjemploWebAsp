@@ -13,9 +13,16 @@ namespace InscripcionUsuarioEjemploWebAsp.Controllers
         // GET: Rol
         public ActionResult Index()
         {
-            using (var context = new InscripcionUsuarioEjemploWebAspContext())
+            try
             {
-                return View(context.Roles.ToList());
+                using (var context = new InscripcionUsuarioEjemploWebAspContext())
+                {
+                    return View(context.Roles.ToList());
+                }
+            }
+            catch (System.IO.FileLoadException ex)
+            {
+                throw new Exception("Error al cargar el archivo o ensamblado 'System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' ni una de sus dependencias. La definición del manifiesto del ensamblado no coincide con la referencia al ensamblado.", ex);
             }
         }
 
