@@ -12,6 +12,7 @@ namespace InscripcionUsuarioEjemploWebAsp.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        [Required(ErrorMessage = "El campo {0} es obligatorio")]
         public string Descripcion { get; set; }
 
         public virtual ICollection<Empleado> Empleados { get; set; }
