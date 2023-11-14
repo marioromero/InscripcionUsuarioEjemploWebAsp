@@ -231,12 +231,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Metodos\Api.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RolController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -249,6 +251,7 @@
     <Compile Include="Models\Inscripcion.cs" />
     <Compile Include="Models\InscripcionUsuarioEjemploWebAspContext.cs" />
     <Compile Include="Models\Rol.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -307,6 +310,7 @@
     <Content Include="Views\Rol\Create.cshtml" />
     <Content Include="Views\Rol\Edit.cshtml" />
     <Content Include="Views\Rol\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
